@@ -74,13 +74,13 @@ questions.
         </exec>
 
         <exec executable="${cc}" failonerror="true">
-            <arg line="${arch64} ${arch32}"/>
+            <arg line="${arch64} ${archarm64}"/>
             <arg value="-I"/>
             <arg value="${javahome}/include"/>
             <arg value="-I"/>
             <arg value="${javahome}/include/darwin"/>
             <arg value="-o"/>
-            <arg value="${ant.project.name}/${folder.classes}/com/oracle/appbundler/JavaAppLauncher"/>
+            <arg value="${ant.project.name}/${folder.classes}/com/deciphermedia/appbundler/JavaAppLauncher"/>
             <arg value='-DLIBJLI_DYLIB="${javahome}/jre/lib/jli/libjli.dylib"'/>
             <arg value="-framework"/>
             <arg value="Cocoa"/>
@@ -105,15 +105,15 @@ questions.
 
     <!-- Package target -->
     <target name="package" depends="compile">
-        <zip destfile="${ant.project.name}/${folder.classes}/com/oracle/appbundler/res.zip">
+        <zip destfile="${ant.project.name}/${folder.classes}/com/deciphermedia/appbundler/res.zip">
             <fileset dir="${ant.project.name}/${folder.res}"/>
         </zip>
 
         <jar destfile="${ant.project.name}/${folder.bin}/${ant.project.name}-${version}.jar" index="true">
             <manifest>
-                <attribute name="Implementation-Vendor-Id" value="com.oracle"/>
-                <attribute name="Implementation-Vendor" value="Oracle"/>
-                <attribute name="Implementation-Title" value="App Bundler Ant Task"/>
+                <attribute name="Implementation-Vendor-Id" value="com.deciphermedia"/>
+                <attribute name="Implementation-Vendor" value="Decipher Media"/>
+                <attribute name="Implementation-Title" value="App Bundler Ant Task adapted from Oracle"/>
                 <attribute name="Implementation-Version" value="${version}"/>
             </manifest>
             <fileset dir="${ant.project.name}/${folder.classes}"/>
@@ -126,14 +126,14 @@ questions.
 
     <!-- Test targets -->
     <target name="test" depends="package">
-        <taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask"
+        <taskdef name="bundleapp" classname="com.deciphermedia.appbundler.AppBundlerTask"
             classpath="${ant.project.name}/${folder.bin}/${ant.project.name}-${version}.jar"/>
 
         <bundleapp outputdirectory="."
             debug="true"
             name="Test"
             displayname="Test"
-            identifier="com.oracle.javafx.swing.Test"
+            identifier="com.deciphermedia.javafx.swing.Test"
             shortversion="1.0"
             applicationCategory="public.app-category.developer-tools"
             mainclassname="com/javafx/main/Main">
@@ -145,14 +145,14 @@ questions.
     </target>
 
     <target name="test-plugin" depends="package">
-        <taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask"
+        <taskdef name="bundleapp" classname="com.deciphermedia.appbundler.AppBundlerTask"
             classpath="${ant.project.name}/${folder.bin}/${ant.project.name}-${version}.jar"/>
 
         <bundleapp outputdirectory="."
             debug="true"
             name="TestPlugin"
             displayname="Test (Plugin)"
-            identifier="com.oracle.javafx.swing.TestPlugin"
+            identifier="com.deciphermedia.javafx.swing.TestPlugin"
             shortversion="1.0"
             applicationCategory="public.app-category.developer-tools"
             mainclassname="com/javafx/main/Main">
