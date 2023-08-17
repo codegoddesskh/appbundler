@@ -55,7 +55,7 @@
 #define JVM_RUNTIME "$JVM_RUNTIME"
 
 #define JAVA_RUNTIME  "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-#define LIBJLI_DY_LIB "lib/jli/libjli.dylib"
+#define LIBJLI_DY_LIB "lib/libjli.dylib"
 #define DEPLOY_LIB    "lib/deploy.jar"
 
 //*
@@ -210,6 +210,9 @@ int launch(char *commandName, int progargc, char *progargv[]) {
     if (runtime != nil) {
         NSString *dylibRelPath = @"Contents/Home/jre";
         javaDylib = [[runtimePath stringByAppendingPathComponent:dylibRelPath] stringByAppendingPathComponent:@LIBJLI_DY_LIB];
+
+	DLog(@"dylibRelPath searching at: %@", javaDylib);
+	
         BOOL isDir;
         NSFileManager *fm = [[NSFileManager alloc] init];
         BOOL javaDylibFileExists = [fm fileExistsAtPath:javaDylib isDirectory:&isDir];
