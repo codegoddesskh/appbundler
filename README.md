@@ -4,7 +4,7 @@ appbundler
 A fork of the [Java Application Bundler](https://svn.java.net/svn/appbundler~svn) 
 with the following changes:
 
-- The native binary is created as universal (32/64)
+- The native binary is created as universal ~(32/64)~ (x86_64/arm64)
 - Fixes [icon not showing bug](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7159381) in `JavaAppLauncher`
 - Adds `LC_CTYPE` environment variable to the `Info.plist` file in order to fix an [issue with `File.exists()` in OpenJDK 7](http://java.net/jira/browse/MACOSX_PORT-165)  **(Contributed by Steve Hannah)**
 - Allows to specify the name of the executable instead of using the default `"JavaAppLauncher"` **(contributed by Karl von Randow)**
