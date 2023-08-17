@@ -23,8 +23,24 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
-public class Environment extends Option {
-    
+public class PlistEntry extends Option {
+    private String type = null;
+
+    public void setKey(String key) {
+        setName(key);
+    }
+
+    public String getKey() {
+        return getName();
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 }

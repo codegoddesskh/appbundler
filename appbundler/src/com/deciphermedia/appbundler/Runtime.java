@@ -24,7 +24,7 @@
  * questions.
  */
 
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
 import java.io.File;
 import java.io.IOException;

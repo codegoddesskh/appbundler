@@ -24,7 +24,7 @@
  * questions.
  */
 
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;

@@ -21,9 +21,9 @@
  *
  */
 
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
-import static com.oracle.appbundler.BundleDocument.getListFromCommaSeparatedString;
+import static com.deciphermedia.appbundler.BundleDocument.getListFromCommaSeparatedString;
 
 import java.io.File;
 import java.util.Arrays;

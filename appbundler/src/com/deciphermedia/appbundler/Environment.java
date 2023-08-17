@@ -1,5 +1,5 @@
 /*
- * Copyright 2015, Quality First Software GmbH and/or its affiliates. All rights reserved.
+ * Copyright 2015, Oracle and/or its affiliates. All rights reserved.
  *
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
@@ -19,14 +19,12 @@
  * 2 along with this work; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
  */
+package com.deciphermedia.appbundler;
 
-package com.oracle.appbundler;
-
-import java.io.File;
-
-public interface IconContainer {
-    public boolean hasIcon();
-    public String getIcon();
-    public File getIconFile();
+public class Environment extends Option {
+    
 }

@@ -24,7 +24,7 @@
  * questions.
  */
 
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
 /**
  * Class representing an option that will be passed to the JVM at startup.

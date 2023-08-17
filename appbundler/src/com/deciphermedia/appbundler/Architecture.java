@@ -21,7 +21,7 @@
  *
  */
 
-package com.oracle.appbundler;
+package com.deciphermedia.appbundler;
 
 /**
  * Class representing an architecture that will be written in the Info.plist file

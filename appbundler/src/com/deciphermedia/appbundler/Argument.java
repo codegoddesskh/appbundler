@@ -1,5 +1,5 @@
 /*
- * Copyright 2015, Oracle and/or its affiliates. All rights reserved.
+ * Copyright 2012, Oracle and/or its affiliates. All rights reserved.
  *
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
@@ -23,24 +23,26 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-package com.oracle.appbundler;
 
-public class PlistEntry extends Option {
-    private String type = null;
+package com.deciphermedia.appbundler;
 
-    public void setKey(String key) {
-        setName(key);
+/**
+ * Class representing an argument that will be passed to the Java application
+ * at startup.
+ */
+public class Argument {
+    private String value = null;
+
+    public String getValue() {
+        return value;
     }
 
-    public String getKey() {
-        return getName();
+    public void setValue(String value) {
+        this.value = value;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getType() {
-        return type;
+    @Override
+    public String toString() {
+        return value;
     }
 }
