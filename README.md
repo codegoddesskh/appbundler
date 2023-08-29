@@ -78,8 +78,9 @@ Example 1:
           
           <runtime dir="${runtime}/Contents/Home"/>
 
+          <!-- the order matters here, and should be in order of preference -->
+          <arch name="arm64"/>
           <arch name="x86_64"/>
-          <arch name="i386"/>
 
           <bundledocument extensions="png,jpg"
             icon="${icons.path}/${image.icns}"
